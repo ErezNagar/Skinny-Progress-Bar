@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+  color: grey;
+  text-decoration: none;
+}
+.hero {
+  height: 200px;
+  margin-top: 50px;
+  text-align: center;
+  background-image: linear-gradient(to right, #880E4F 0, #C2185B 100%);
+}
+.hero p {
+  color: white;
+  opacity: .7;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+h1 {
+  color: white;
+  padding: 1.5em 0 .5em 0;
+}
+section {
+  padding: 3em 0;
+  box-sizing: border-box;
+}
+code {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 1em;
+  color: #E0E0E0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #263238;
+}
+code:first-child {
+  margin: 0 auto;
+}
+code span {
+  display: block;
+}
+code span.space {
+  height: 15px;
+}
+code span.tab {
+  text-indent: 20px;
+}
+code span.comment {
+  color: #757575;
+}
+code span.token {
+  display: inline;
+  color: #64B5F6;
+}
+code span.id {
+  display: inline;
+  color: #e57373;
+}
+code span.val {
+  display: inline;
+  color: #FFCC80;
+}
+.progressBar {
+  width: 30%;
+  margin: 0 auto;
+}
+.footer {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Skinny Progress Bar</title>
+        <link rel="stylesheet" href="src/style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <h1>Skinny Progress Bar</h1>
+            <p>A skinny YouTube-like progress bar</p>
+        </div>
+
+        <section>
+            <code>
+                &ltscript src="skinnyProgressBar.js"&gt&lt/script&gt
+            </code>
+
+            <code>
+                <span><span class="token">var</span> progressBar = <span class="token">new</span> SkinnyProgressBar();</span>
+                <span class="space"></span>
+
+                <span class="comment">// Load something awesome</span>
+                <span>progressBar.<span class="id">load</span>(<span class="val">10</span>);</span>
+                <span class="space"></span>
+
+                <span>progressBar.<span class="id">load</span>(<span class="val">40</span>);</span>
+                <span class="space"></span>
+
+                <span class="comment">// Finished loading</span>
+                <span>progressBar.<span class="id">load</span>(<span class="val">100</span>);</span>
+            </code>
+
+            <code>
+                <span><span class="token">var</span> anotherProgressBar = <span class="token">new</span> SkinnyProgressBar({</span>
+                <span class="tab">el: <span class="val">".progressBar"</span></span>
+                <span class="tab">color: <span class="val">"#ff6f00"</span></span>
+                <span>});</span>
+            </code>
+            <div class="progressBar"></div>
+        </section>
+
+        <div class="footer">
+            <p><a href="https://github.com/ErezNagar/Skinny-Progress-Bar">Github</p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="src/skinnyProgressBar.js"></script>
+        <script>
+            var progressBar1 = new SkinnyProgressBar();
+            var progressBar2 = new SkinnyProgressBar({el: ".progressBar", color: "#FF6F00"});
+            var loadingValue = 0;
+            var loading = setInterval(function(){
+                loadingValue += 25;
+                progressBar1.load(loadingValue);
+                progressBar2.load(loadingValue);
+
+                if (loadingValue == 100){
+                    loadingValue = 0;
+                }
+            }, 500);
+        </script>
+    </body>
+</html>
