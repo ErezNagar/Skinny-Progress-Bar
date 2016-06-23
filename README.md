@@ -1,6 +1,6 @@
 # Skinny Progress Bar
 
-### A skinny YouTube-like progress bar
+#### A skinny YouTube-like progress bar
 
 Check the [demo](https://ereznagar.github.io/Skinny-Progress-Bar/)
 
