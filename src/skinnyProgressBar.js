@@ -1,16 +1,8 @@
-// one of the great things mobile has given the web is the nice little progress bar
-
-//css
-//nth-child
-//border-radius
-//gradient
-// transition
 class SkinnyProgressBar {
     constructor(options){
         this.options = options || {};
 
         this.options.el = this.options.el ? this.options.el : "body";
-        //this.options.color = this.options.color ? this.options.color : "#4A148C";
         this.options.color = this.options.color ? this.options.color : "#01579B";
 
         this.model = {
@@ -22,13 +14,12 @@ class SkinnyProgressBar {
         this.progressBar = $("<div id='skinny-progress-bar'></div>");
         this.progressBar.css({
             "z-index": "99999",
-            "height": "5px",
+            "height": "3px",
             "width": "0",
             "background-color": this.options.color,
             "opacity": "1",
             "border-top-right-radius": "4px",
             "border-bottom-right-radius": "4px",
-            // "-webkit-transition": "width 2s, opacity 500ms",
             "transition": "width 200ms, opacity 400ms"
         });
 
