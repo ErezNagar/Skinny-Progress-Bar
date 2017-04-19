@@ -1,3 +1,5 @@
+'use strict';
+
 class SkinnyProgressBar {
     constructor(options){
         this.options = options || {};
@@ -20,7 +22,7 @@ class SkinnyProgressBar {
             "opacity": "1",
             "border-top-right-radius": "4px",
             "border-bottom-right-radius": "4px",
-            "transition": "width 200ms, opacity 400ms"
+            "transition": "width 200ms, opacity 500ms"
         });
 
         if (this.model.el == "body")
@@ -41,12 +43,16 @@ class SkinnyProgressBar {
         this.model.value = 0;
 
         var self = this;
-        setTimeout(function(){
+        setTimeout(() => {
             self.progressBar.css("opacity", 0);
+            setTimeout(() => {
+                self.progressBar.css("width", self.model.value + "%");
+                setTimeout(() => {
+                    self.progressBar.css("opacity", 1);
+                }, 200);
+            }, 500);
         }, 200);
-
-        setTimeout(function(){
-            self.progressBar.css("opacity", 1);
-        }, 700);
     }
 }
+
+module.exports = SkinnyProgressBar;
