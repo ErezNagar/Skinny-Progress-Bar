@@ -7,13 +7,13 @@ A basic YouTube-like web progress bar implementation using CSS and jQuery.
 #### Browser
 
 ```html
-<script src="skinnyProgressBar.js"></script>
+<script src="path/to/skinnyProgressBar.js"></script>
 ```
 
 #### Node
 
 ```js
-import SkinnyProgressBar from "./skinnyProgressBar";
+import SkinnyProgressBar from "./path/to/skinnyProgressBar";
 ```
 And then simply initialize it and set the progress value:
 
@@ -38,6 +38,7 @@ var progressBar = new SkinnyProgressBar({
 ```
 
 **el**: A DOM element into which the SkinnyProgressBar would be rendered.
+
 **color**: The color of the progressBar.
 
 ### Demo
